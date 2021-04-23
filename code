@@ -1,0 +1,18 @@
+biology = ["Sarah", "Ahmed", "Fred", "Gillian", "Shradah", "Max", "Max", "Sara", "Max", "Esther"]
+
+computerScience = ["Sarah", "John", "Fred", "Gillian", "Jermaine", "Max", "Sara", "Juan", "Esther"]
+
+english = ["Nico", "Sharjeel", "Isabella", "Taylor", "Ali", "Ali", "Jean-Baptiste", "Jean-Baptiste", "Jean-Baptiste", "William"]
+
+def People(class1):
+  enrolled=set()
+  waitlist=set()
+  for i in class1:
+    if len(enrolled)<6:
+      enrolled.add(i)
+    elif i not in enrolled:
+      waitlist.add(i)
+  return waitlist
+print(People(biology))
+print(People(computerScience))
+print(People(english))
